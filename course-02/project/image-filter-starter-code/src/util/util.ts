@@ -2,7 +2,6 @@ import { Axios, AxiosResponse } from "axios";
 import fs from "fs";
 import Jimp = require("jimp");
 const axios = require('axios').default;
-// require("axios")
 
 // filterImageFromURL
 // helper function to download, filter, and save the filtered image locally
