@@ -1,15 +1,15 @@
 // TODO: Implement the fileStogare logic
 import * as AWS from 'aws-sdk'
-import * as AWSXRay from 'aws-xray-sdk'
-import { DocumentClient } from 'aws-sdk/clients/dynamodb'
-import { createLogger } from '../utils/logger'
-import { TodoItem } from '../models/TodoItem'
-import { TodoUpdate } from '../models/TodoUpdate';
+// import * as AWSXRay from 'aws-xray-sdk'
+// import { DocumentClient } from 'aws-sdk/clients/dynamodb'
+// import { createLogger } from '../utils/logger'
+// import { TodoItem } from '../models/TodoItem'
+// import { TodoUpdate } from '../models/TodoUpdate';
 import { Types } from 'aws-sdk/clients/s3';
 
-const XAWS = AWSXRay.captureAWS(AWS)
+// const XAWS = AWSXRay.captureAWS(AWS)
 
-const logger = createLogger('TodosAccess')
+// const logger = createLogger('TodosAccess')
 
 
 export class AttachmentUtils {
