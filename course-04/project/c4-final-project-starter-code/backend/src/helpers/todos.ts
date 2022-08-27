@@ -13,6 +13,7 @@ const toDoAccess = new TodosAccess();
 const attachmentUtils = new AttachmentUtils();
 
 export async function getAllToDo(userId: string): Promise<TodoItem[]> {
+    // logger.info('User was authorized', jwtToken)
     return toDoAccess.getAllToDo(userId);
 }
 

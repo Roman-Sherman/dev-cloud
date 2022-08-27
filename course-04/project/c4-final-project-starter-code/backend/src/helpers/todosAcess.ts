@@ -9,6 +9,12 @@ import { TodoUpdate } from '../models/TodoUpdate';
 
 // const logger = createLogger('TodosAccess')
 
+// AWSXRay.setLogger(logger);
+
+// const lambda = new XAWS.Lambda();
+
+// lambda.invoke
+
 // TODO: Implement the dataLayer logic
 
 export class TodosAccess {
