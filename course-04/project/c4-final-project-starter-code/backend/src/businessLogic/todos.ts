@@ -19,7 +19,7 @@ export async function getAllToDo(userId: string): Promise<TodoItem[]> {
 
 export async function createToDo(createTodoRequest: CreateTodoRequest, userId: string): Promise<TodoItem> {
     const todoId =  uuidv4();
-    const s3BucketName = process.env.S3_BUCKET_NAME;
+    // const s3BucketName = process.env.S3_BUCKET_NAME;
     
     return toDoAccess.createToDo({
         userId: userId,
