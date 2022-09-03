@@ -4,7 +4,9 @@
   "type": "object",
   "properties": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "minItems": 1,
+      "pattern": "^[A-Za-z0-9]+"
     },
     "dueDate": {
       "type": "string"
