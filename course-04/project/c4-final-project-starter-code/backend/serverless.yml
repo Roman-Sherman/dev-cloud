@@ -28,7 +28,7 @@ provider:
     TODOS_TABLE: Omar-Todos-${self:provider.stage}
     TODOS_CREATED_AT_INDEX: CreatedAtIndex
     ATTACHMENT_S3_BUCKET: omar-serverless-c4-todo-images-${self:provider.stage}
-    SIGNED_URL_EXPIRATION: 300
+    SIGNED_URL_EXPIRATION: 800
 
   logs:
     # Enable API Gateway logs
@@ -163,6 +163,10 @@ functions:
           reqValidatorName: RequestBodyValidator
     iamRoleStatementsInherit: true
     iamRoleStatements:
+      - Effect: Allow
+        Action:
+          - dynamodb:UpdateItem
+        Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}
       - Effect: Allow
         Action:
           - s3:*
